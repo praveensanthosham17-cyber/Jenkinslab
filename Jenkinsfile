@@ -4,8 +4,13 @@ pipeline {
     stages {
         stage('Hello Stage') {
             steps {
-                echo 'Hello, World!'
+                sh 'javac Addition.java'
             }
         }
+        stage('Run'){
+            steps{
+                sh 'java Addition'
+    }
+}
     }
 }
